@@ -16,12 +16,6 @@ AC_ARG_ENABLE([examples],
     [AS_HELP_STRING([--enable-examples],
         [build the fvadwav example program; requires libsndfile @<:@default=no@:>@])])
 
-AS_IF([test "x$enable_examples" = xyes],
-    [PKG_CHECK_MODULES([sndfile], [sndfile])],
-    [enable_examples=no])
-
-AM_CONDITIONAL([BUILD_EXAMPLES], [test "x$enable_examples" = xyes])
-
 ### output ###
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([Makefile src/Makefile examples/Makefile tests/Makefile libfvad.pc])

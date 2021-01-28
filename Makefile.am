@@ -1,7 +1,3 @@
-if BUILD_EXAMPLES
-  examples_dir = examples
-endif
-
 SUBDIRS = src $(examples_dir) tests
 AM_DISTCHECK_CONFIGURE_FLAGS = --enable-examples
 ACLOCAL_AMFLAGS = -I m4
